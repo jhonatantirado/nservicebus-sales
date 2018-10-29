@@ -11,11 +11,8 @@
     <PackageReference Include="NServiceBus" Version="7.1.4" />
     <PackageReference Include="NServiceBus.Persistence.Sql" Version="4.3.0" />
     <PackageReference Include="NServiceBus.RabbitMQ" Version="5.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Sales.Contracts\Sales.Contracts.csproj" />
-    <ProjectReference Include="..\Sales.InternalMessages\Sales.InternalMessages.csproj" />
+    <PackageReference Include="Sales.Contracts" Version="1.0.0" />
+    <PackageReference Include="Sales.InternalMessages" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
