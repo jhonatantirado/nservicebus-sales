@@ -5,6 +5,8 @@ before_script:
   - chmod a+x ./travis_build.sh
 script:
  - ./travis_build.sh
+before_deploy:
+ - cd Sales.EndPoint
 deploy:
    provider: cloudfoundry
    username: jhonatantiradotiradodeep@gmail.com
