@@ -1,0 +1,15 @@
+language: csharp
+mono: none
+dotnet: 2.1.301
+before_script:
+  - chmod a+x ./travis-build.sh
+script:
+ - ./travis-build.sh
+deploy:
+   provider: cloudfoundry
+   username: jhonatantiradotiradodeep@gmail.com
+   password:
+    secure: "bcItSJRU0JwtCm+ETNQcNlzQE5ksP8PotCKYI7QdGLjLayi5806fH64fLEOSzVKMjvG1taQWyEwrU/B3bOi656JZXHh+yKQ7c5IOPjNtTknnmSlqS8BlOSafE0Lm20OAiYJFaDXnBqzHA/MGUk6qTTFdl53iKpYVWPG831vFkHsWEjWPzgfmgBSPlNorZ3iSnnTXttUmP/WBDnmIwQ56+viRE92ywklelOJeIZQs5YMZLTvP5JTXENTfGojQOUyWB7YHPe8N4aztsSa4R8zVVOnkxAgsOFHd7Ot8f5A4+ZR7tbtFy7NQfqDaGeAbQtWdVj00Jxxs4pMNtmYP4I3zP5H1CsZd84FR4skzrZirYk1q4dS9h5e8GPcLACQ43QdBymiECK4rtwIoeJTi253gRYWiR4ufhsfyLR32PSt7b/50zQgg41kkg75MswyIC8vI9IUZwGqJwuCWN+6vf+2MlOeNDugfmwrbR+0dh/qLXt++pIr75NcEHWQXc8aWqyla0H1JMr1yBAceTI1FGnQ4PFdjz8IZFNQk/bOw5V+Jno76CjQvTWeXPktOFdSsQ6RTHsiDJ9Z85Sh1cbAMhj9tcr9w8QOgf81Ty4/QQQ0m16JnRefof0dReWbYq/m5yGQvQK5U/dQSNm0NtYLBteipG34I9cgBsXLP7k29WILM/L8="
+   api: https://api.run.pivotal.io
+   organization: kipubit
+   space: development
